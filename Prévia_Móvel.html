@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Comercial Soares — Prévia do sistema</title>
+<style>
+:root{--navy:#102b46;--blue:#1766a6;--bg:#f3f6fa;--line:#e0e8ef;--muted:#718397;--green:#16815b}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:#172b40;font:14px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-text-size-adjust:100%;padding-bottom:env(safe-area-inset-bottom)}button,input,textarea{font:inherit}button{cursor:pointer}.layout{min-height:100vh;display:flex}.side{width:235px;background:var(--navy);color:white;padding:24px 16px;display:flex;flex-direction:column;flex-shrink:0}.brand{display:flex;align-items:center;gap:12px;padding:0 8px 34px}.logo{height:42px;width:42px;border-radius:12px;background:#294b67;display:grid;place-items:center;font-weight:800}.brand strong{display:block;font-size:12px;letter-spacing:1px}.brand span{display:block;color:#b8c9d7;font-size:11px;margin-top:4px;letter-spacing:1px}.label{font-size:9px;letter-spacing:1.5px;color:#9bb0c1;padding:0 10px 12px}.nav{display:flex;gap:10px;align-items:center;border:0;background:transparent;color:#c8d7e3;padding:13px 12px;border-radius:9px;text-align:left;margin-bottom:5px}.nav.active,.nav:hover{background:#244662;color:#fff}.side-note{margin-top:auto;border-top:1px solid #2d4961;padding:16px 8px 0;color:#b4c7d6;font-size:11px;line-height:1.5}.main{min-width:0;flex:1}.top{height:68px;background:white;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 30px}.top strong{font-size:12px;color:var(--navy)}.pill{background:#e8f7ef;color:#15734d;padding:7px 10px;border-radius:20px;font-size:11px}.content{max-width:1400px;margin:auto;padding:30px}.heading{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;gap:16px}.eyebrow{font-size:10px;font-weight:800;letter-spacing:1.7px;color:var(--blue);margin:0 0 8px}.heading h1{font-size:27px;letter-spacing:-.7px;margin:0;color:var(--navy)}.sub{color:var(--muted);font-size:12px;margin:8px 0 0}.date{background:#fff;border:1px solid var(--line);padding:10px 13px;border-radius:9px;font-size:11px;color:#60768a;white-space:nowrap}.grid{display:grid;grid-template-columns:minmax(0,1fr) 270px;gap:18px;align-items:start}.panel,.summary{background:#fff;border:1px solid var(--line);border-radius:14px;padding:23px;box-shadow:0 4px 16px #102b4605}.sect-head{display:flex;align-items:center;gap:12px;margin-bottom:20px}.num{width:34px;height:34px;background:#edf4f9;color:#32698e;border-radius:10px;display:grid;place-items:center;font-size:11px;font-weight:800}.sect-head h2{font-size:15px;margin:0;color:var(--navy)}.sect-head p{font-size:11px;color:var(--muted);margin:5px 0 0}.field{display:grid;gap:7px;font-size:11px;font-weight:700;color:#40566a}.field input,.field textarea,.search{border:1px solid #dce5ed;border-radius:9px;padding:12px;background:white;outline:none;min-width:0;width:100%;color:#172b40}.field input:focus,.field textarea:focus,.search:focus{border-color:#5292c5;box-shadow:0 0 0 3px #1766a612}.divider{height:1px;background:#edf1f5;margin:24px 0}.headrow{display:flex;align-items:center;gap:12px;margin-bottom:18px}.headrow .sect-head{flex:1;margin:0}.btn{border:1px solid transparent;border-radius:9px;padding:11px 14px;font-size:11px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;gap:7px}.primary{background:var(--navy);color:white}.primary:hover{background:#1b496f}.outline{background:white;border-color:#dce5ed;color:#3c5267}.light{background:#edf5fa;color:#285d84}.formrow{display:grid;grid-template-columns:minmax(120px,1fr) 80px 120px auto;gap:10px;align-items:end}.formrow .btn{height:40px}.tablewrap{overflow-x:auto;margin-top:22px}table{border-collapse:collapse;width:100%;font-size:11px}th{text-align:left;background:#f5f8fb;color:#718397;font-size:9px;letter-spacing:.5px;padding:12px 10px;white-space:nowrap}td{padding:13px 10px;border-bottom:1px solid #edf1f5;color:#40566a}td.money{white-space:nowrap}.empty{text-align:center;padding:30px 10px;color:#7a8c9d;font-size:11px}.empty b{display:block;color:#40566a;margin:10px 0 5px}.summary{position:sticky;top:18px}.sumtitle{font-size:9px;letter-spacing:1.2px;font-weight:800;color:#71879a;display:flex;justify-content:space-between}.bigcount{font-size:30px;font-weight:800;color:var(--navy);margin:20px 0}.bigcount span{font-size:12px;font-weight:500;color:var(--muted)}.sumline{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid #edf1f5;padding:13px 0;font-size:10px;color:var(--muted)}.sumline b{color:#344a60;text-align:right}.sumtotal{padding:20px 0 16px;font-size:11px;color:var(--muted)}.sumtotal strong{display:block;font-size:25px;color:var(--navy);margin-top:8px}.tip{font-size:10px;line-height:1.5;color:#55748d;background:#f1f7fb;border-radius:8px;padding:11px}.actions{display:flex;justify-content:space-between;gap:10px}.actions>div{display:flex;gap:8px}.notice{background:#eef6fc;color:#285e83;border:1px solid #dcecf7;padding:12px;border-radius:9px;font-size:12px;margin-bottom:16px;display:none}.history{display:none}.historytop{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:18px}.historytop h2{font-size:15px;margin:0}.rowbtn{border:0;background:transparent;color:#526c80;padding:6px}.danger{color:#b42318}.bulk{display:none;background:#f7fafc;border:1px solid var(--line);padding:14px;border-radius:10px;margin:0 0 16px}.bulk textarea{width:100%;padding:11px;border:1px solid var(--line);border-radius:8px;resize:vertical}.smallnote{font-size:10px;color:var(--muted);margin:8px 0}.foot{display:flex;justify-content:space-between;color:#8798a7;font-size:10px;margin-top:26px}.login{max-width:440px;margin:10vh auto;background:#fff;border:1px solid var(--line);border-radius:18px;padding:32px}.login h1{color:var(--navy)}.warning{font-size:11px;line-height:1.5;background:#fff7e8;color:#855c1a;padding:12px;border-radius:8px;margin-top:20px}
+@media(max-width:1000px){.grid{grid-template-columns:1fr}.summary{position:static;grid-row:1}.bigcount{margin:12px 0}.sumline{padding:8px 0}.tip{display:none}.formrow{grid-template-columns:minmax(100px,1fr) 70px 110px}.formrow .btn{grid-column:1/-1}.content{padding:22px}.side{width:190px}}
+@media(max-width:620px){.side{width:57px;padding:16px 6px}.brand{justify-content:center;padding:0 0 25px}.brand>div:last-child,.label,.nav span,.side-note{display:none}.nav{justify-content:center;padding:13px 0;font-size:0}.nav .ico{font-size:16px}.top{height:58px;padding:0 14px}.top strong{font-size:10px}.content{padding:17px 12px}.heading{align-items:flex-start;flex-direction:column;margin-bottom:18px}.heading h1{font-size:23px}.panel,.summary{padding:16px}.formrow{grid-template-columns:1fr 1fr}.formrow .field:first-child,.formrow .field:nth-child(3),.formrow .btn{grid-column:1/-1}.actions{flex-direction:column}.actions>div{display:grid;grid-template-columns:1fr 1fr}.actions button{width:100%}.headrow{flex-wrap:wrap}.headrow .sect-head{min-width:100%}.historytop{align-items:flex-start;flex-direction:column}.historytop .search{width:100%}.foot{font-size:9px}}
+
+/* Mobile-first adjustments for iOS Safari and Android Chrome */
+button,.btn,.nav,input,textarea{touch-action:manipulation}
+input,textarea{font-size:16px}
+@media(max-width:620px){
+  .layout{display:block;min-height:100dvh}
+  .side{width:100%;height:auto;position:sticky;top:0;z-index:20;display:flex;flex-direction:row;align-items:center;padding:8px 10px;gap:5px;box-shadow:0 2px 12px #102b4612}
+  .brand{padding:0 7px 0 0;gap:7px;min-width:42px}
+  .logo{width:34px;height:34px;border-radius:9px;font-size:12px}
+  .brand>div:last-child{display:none}
+  .label,.side-note{display:none}
+  .nav{flex:1;justify-content:center;gap:5px;padding:10px 4px;margin:0;font-size:11px;white-space:nowrap;min-height:42px}
+  .nav span{display:inline}
+  .nav .ico{font-size:14px}
+  .main{width:100%;min-width:0}
+  .top{height:auto;min-height:48px;padding:10px 12px;gap:8px}
+  .top strong{font-size:9px;line-height:1.35}
+  .pill{font-size:9px;padding:6px 8px;white-space:nowrap}
+  .content{padding:16px 12px 24px}
+  .heading{gap:10px}
+  .heading h1{font-size:24px;line-height:1.15}
+  .date{font-size:11px}
+  .grid{grid-template-columns:minmax(0,1fr);gap:12px}
+  .summary{grid-row:auto;position:static}
+  .panel,.summary{padding:15px;border-radius:12px}
+  .sect-head{gap:9px;margin-bottom:16px}
+  .sect-head h2{font-size:14px}
+  .sect-head p{line-height:1.4}
+  .num{width:30px;height:30px;flex-shrink:0}
+  .formrow{grid-template-columns:minmax(0,1fr) minmax(70px,.5fr);gap:10px}
+  .formrow .field:first-child{grid-column:1/-1}
+  .formrow .field:nth-child(3){grid-column:1/-1}
+  .formrow .btn{grid-column:1/-1;width:100%;min-height:44px}
+  .field input{min-height:44px;padding:12px}
+  .btn{min-height:42px;padding:11px 12px}
+  .headrow{gap:10px}
+  .headrow .sect-head{min-width:0;flex:1}
+  #toggleBulk{flex-shrink:0;font-size:10px;padding:10px 9px}
+  .tablewrap{margin-top:16px}
+  table{min-width:480px}
+  .empty{min-width:0;padding:25px 8px}
+  .actions{gap:10px}
+  .actions>div{grid-template-columns:1fr}
+  .actions button{min-height:44px}
+  .summary .bigcount{font-size:27px}
+  .sumline{font-size:11px}
+  .sumtotal strong{font-size:24px}
+  .historytop{gap:12px}
+  .historytop .search{width:100%;min-height:44px}
+  .foot{gap:12px;line-height:1.4;flex-wrap:wrap}
+}
+@media(max-width:380px){
+  .side{padding:7px 6px;gap:3px}
+  .brand{min-width:34px}
+  .logo{width:30px;height:30px}
+  .nav{font-size:10px;padding:9px 2px}
+  .top{align-items:flex-start;flex-direction:column}
+  .heading h1{font-size:22px}
+  .panel,.summary{padding:12px}
+  .headrow{align-items:flex-start;flex-direction:column}
+  #toggleBulk{align-self:flex-start}
+  .actions>div{gap:8px}
+}
+
+</style>
+</head>
+<body>
+<div class="layout">
+<aside class="side">
+  <div class="brand"><div class="logo">CS</div><div><strong>COMERCIAL</strong><span>SOARES</span></div></div>
+  <div class="label">MENU PRINCIPAL</div>
+  <button class="nav active" data-view="novo"><span class="ico">＋</span><span>Novo pedido</span></button>
+  <button class="nav" data-view="historico"><span class="ico">▤</span><span>Pedidos</span></button>
+  <div class="side-note">PRÉVIA DO SISTEMA<br>Esta versão salva dados apenas neste navegador.</div>
+</aside>
+<main class="main">
+<header class="top"><strong>COMERCIAL SOARES · SISTEMA DE PEDIDOS</strong><span class="pill">● Prévia interativa</span></header>
+<div class="content">
+<div class="heading"><div><p class="eyebrow">PAINEL DE CONTROLE</p><h1 id="pageTitle">Criar novo pedido</h1><p class="sub" id="pageSub">Registre os itens e confira o total antes de salvar.</p></div><div class="date" id="date"></div></div>
+<div class="notice" id="notice"></div>
+<section id="newView">
+<div class="grid">
+<div class="panel">
+<div class="sect-head"><div class="num">01</div><div><h2>Informações do pedido</h2><p>Informe o cliente e os produtos.</p></div></div>
+<label class="field">Nome do cliente<input id="client" placeholder="Digite o nome do cliente"></label>
+<div class="divider"></div>
+<div class="headrow"><div class="sect-head"><div class="num">02</div><div><h2>Produtos do pedido</h2><p>Adicione um item por vez ou importe uma lista.</p></div></div><button class="btn light" id="toggleBulk">＋ Importar lista</button></div>
+<div class="bulk" id="bulk"><label class="field">Importação rápida<textarea id="bulkText" rows="4" placeholder="Cole ou digite sua lista de produtos aqui…"></textarea></label><p class="smallnote">Importação rápida de produtos no formato habitual da empresa.</p><button class="btn primary" id="importBtn">Adicionar produtos</button></div>
+<form id="itemForm" class="formrow">
+<label class="field">Produto<input id="product" placeholder="Nome do produto" required></label>
+<label class="field">Quantidade<input id="qty" type="number" min=".01" step="any" value="1" required></label>
+<label class="field">Preço unitário<input id="price" inputmode="decimal" placeholder="0,00" required></label>
+<button class="btn primary" type="submit">＋ Adicionar</button>
+</form>
+<div class="tablewrap"><table><thead><tr><th>PRODUTO</th><th>QTD.</th><th>PREÇO</th><th>SUBTOTAL</th><th></th></tr></thead><tbody id="itemsBody"></tbody></table><div class="empty" id="emptyItems">🛍️<b>Nenhum produto adicionado</b>Os itens do pedido aparecerão aqui.</div></div>
+<div class="divider"></div>
+<div class="actions"><button class="btn outline" id="clear">Limpar formulário</button><div><button class="btn outline" id="save">Salvar pedido</button><button class="btn primary" id="finish">✓ Finalizar pedido</button></div></div>
+</div>
+<aside class="summary"><div class="sumtitle"><span>RESUMO DO PEDIDO</span><span>▣</span></div><div class="bigcount" id="count">0 <span>produtos</span></div><div class="sumline"><span>Cliente</span><b id="sumClient">Não informado</b></div><div class="sumline"><span>Quantidade de itens</span><b id="sumQty">0</b></div><div class="sumtotal">Valor total<strong id="sumTotal">R$ 0,00</strong></div><div class="tip">✓ Confira os valores antes de finalizar.</div></aside>
+</div></section>
+<section class="panel history" id="historyView"><div class="historytop"><div><h2>Histórico de pedidos</h2><p class="sub" id="historyCount">0 pedidos registrados</p></div><input class="search" id="search" placeholder="Buscar por cliente ou status"></div><div class="tablewrap"><table><thead><tr><th>CLIENTE</th><th>DATA</th><th>PRODUTOS</th><th>TOTAL</th><th>STATUS</th><th>AÇÕES</th></tr></thead><tbody id="ordersBody"></tbody></table><div class="empty" id="emptyOrders">▤<b>Nenhum pedido encontrado</b>Crie seu primeiro pedido para começar.</div></div></section>
+<div class="foot"><span>© <span id="year"></span> Comercial Soares</span><span>Versão móvel · dados salvos neste navegador</span></div>
+</div></main></div>
+<script>
+const $=id=>document.getElementById(id);
+let items=[],orders=loadOrders(),editingOrderId=null;
+function loadOrders(){try{const data=JSON.parse(localStorage.getItem('cs_preview_orders')||'[]');return Array.isArray(data)?data:[]}catch(e){return []}}
+function persistOrders(){localStorage.setItem('cs_preview_orders',JSON.stringify(orders))}
+const money=n=>n.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+const priceNum=s=>{s=String(s).trim().replace(/R\$/gi,'').replace(/\s/g,'');if(!s)return NaN;return Number(s.includes(',')?s.replace(/\./g,'').replace(',','.'):s)};
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+$('date').textContent=new Date().toLocaleDateString('pt-BR',{day:'2-digit',month:'short',year:'numeric'});$('year').textContent=new Date().getFullYear();
+function say(s){$('notice').textContent=s;$('notice').style.display='block';window.scrollTo({top:0,behavior:'smooth'})}
+function renderItems(){const total=items.reduce((s,i)=>s+i.qty*i.price,0);$('itemsBody').innerHTML=items.map((i,n)=>`<tr><td>${esc(i.name)}</td><td>${i.qty}</td><td class="money">${money(i.price)}</td><td class="money">${money(i.qty*i.price)}</td><td><button class="rowbtn danger" data-remove="${n}" aria-label="Remover">✕</button></td></tr>`).join('');$('emptyItems').style.display=items.length?'none':'block';$('count').innerHTML=`${items.length} <span>${items.length===1?'produto':'produtos'}</span>`;$('sumClient').textContent=$('client').value.trim()||'Não informado';$('sumQty').textContent=items.reduce((s,i)=>s+i.qty,0);$('sumTotal').textContent=money(total);$('itemsBody').querySelectorAll('[data-remove]').forEach(b=>b.onclick=()=>{items.splice(+b.dataset.remove,1);renderItems()})}
+$('client').addEventListener('input',renderItems);
+$('itemForm').onsubmit=e=>{e.preventDefault();const name=$('product').value.trim(),qty=Number($('qty').value),price=priceNum($('price').value);if(!name||qty<=0||!Number.isFinite(price)||price<0){say('Confira o produto, a quantidade e o preço.');return}items.push({name,qty,price});$('product').value='';$('qty').value='1';$('price').value='';renderItems();$('product').focus()};
+$('toggleBulk').onclick=()=>{$('bulk').style.display=$('bulk').style.display==='block'?'none':'block'};
+$('importBtn').onclick=()=>{
+  const raw=$('bulkText').value.trim();
+  if(!raw){say('Cole sua lista de produtos no campo de importação.');return}
+  // Mantém a lógica do motor antigo: cada item começa com a quantidade,
+  // o nome vai até o próximo token vPREÇO, e a próxima quantidade inicia outro item.
+  const tokens=raw.split(/\s+/).filter(Boolean);
+  const imported=[];let errors=0;let i=0;
+  while(i<tokens.length){
+    const qtyToken=tokens[i];
+    if(!/^\d+(?:[.,]\d+)?$/.test(qtyToken)){errors++;i++;continue}
+    const qty=Number(qtyToken.replace(',','.'));
+    if(!Number.isFinite(qty)||qty<=0){errors++;i++;continue}
+    let priceIndex=-1,price=NaN;
+    for(let j=i+1;j<tokens.length;j++){
+      const token=tokens[j];
+      const marker=token.match(/^v(.+)$/i);
+      if(marker && /^[\d.,]+$/.test(marker[1])){
+        const parsed=priceNum(marker[1]);
+        if(Number.isFinite(parsed)&&parsed>=0){priceIndex=j;price=parsed;break}
+      }
+    }
+    if(priceIndex<0){errors++;break}
+    const name=tokens.slice(i+1,priceIndex).join(' ').trim();
+    if(!name){errors++;i=priceIndex+1;continue}
+    imported.push({name,qty,price});
+    i=priceIndex+1;
+  }
+  if(imported.length){items.push(...imported);$('bulkText').value='';$('bulk').style.display='none';renderItems();say(`${imported.length} produto(s) importado(s).${errors?` ${errors} trecho(s) não reconhecido(s); confira a lista.`:''}`)}
+  else say('Não foi possível reconhecer produtos nessa lista. Confira a quantidade, o nome e o marcador de preço.');
+};
+$('clear').onclick=()=>{if((items.length||$('client').value||editingOrderId)&&!confirm('Limpar o pedido atual?'))return;items=[];$('client').value='';editingOrderId=null;$('save').textContent='Salvar pedido';$('finish').textContent='✓ Finalizar pedido';renderItems();say('Formulário limpo.')};
+function saveOrder(status){
+  const client=$('client').value.trim();
+  if(!client){say('Informe o nome do cliente.');return}
+  if(!items.length){say('Adicione pelo menos um produto.');return}
+  const now=new Date().toISOString();
+  const total=items.reduce((sum,item)=>sum+item.qty*item.price,0);
+  if(editingOrderId){
+    const idx=orders.findIndex(order=>order.id===editingOrderId);
+    if(idx>=0){orders[idx]={...orders[idx],client,items:items.map(item=>({...item})),total,status,updatedAt:now};}
+    else orders.unshift({id:editingOrderId,client,items:items.map(item=>({...item})),total,status,createdAt:now,updatedAt:now});
+  }else{
+    orders.unshift({id:crypto.randomUUID?crypto.randomUUID():String(Date.now()),client,items:items.map(item=>({...item})),total,status,createdAt:now});
+  }
+  persistOrders();items=[];$('client').value='';editingOrderId=null;$('save').textContent='Salvar pedido';$('finish').textContent='✓ Finalizar pedido';renderItems();showView('historico');renderOrders();say(status==='Finalizado'?'Pedido finalizado e salvo nesta prévia!':'Pedido salvo nesta prévia!');
+}
+$('save').onclick=()=>saveOrder('Aberto');$('finish').onclick=()=>saveOrder('Finalizado');
+function showView(view){const isNew=view==='novo';$('newView').style.display=isNew?'block':'none';$('historyView').style.display=isNew?'none':'block';$('pageTitle').textContent=isNew?'Criar novo pedido':'Pedidos registrados';$('pageSub').textContent=isNew?'Registre os itens e confira o total antes de salvar.':'Consulte, reabra para editar, imprima ou exclua pedidos salvos.';document.querySelectorAll('.nav').forEach(b=>b.classList.toggle('active',b.dataset.view===view))}
+document.querySelectorAll('.nav').forEach(b=>b.onclick=()=>{showView(b.dataset.view);if(b.dataset.view==='historico')renderOrders()});
+function renderOrders(){
+  const query=$('search').value.toLowerCase();
+  const list=orders.filter(o=>(o.client||'').toLowerCase().includes(query)||(o.status||'').toLowerCase().includes(query));
+  $('ordersBody').innerHTML=list.map(o=>`<tr><td><b>${esc(o.client||'Cliente não informado')}</b></td><td>${new Date(o.createdAt||Date.now()).toLocaleDateString('pt-BR')}</td><td>${(o.items||[]).length} item(ns)</td><td class="money"><b>${money(Number(o.total)||0)}</b></td><td>${esc(o.status||'Aberto')}</td><td><button class="btn outline" data-reopen="${o.id}">Reabrir</button> <button class="btn outline" data-print="${o.id}">PDF / Imprimir</button> <button class="rowbtn danger" data-del="${o.id}" aria-label="Excluir pedido">✕</button></td></tr>`).join('');
+  $('emptyOrders').style.display=list.length?'none':'block';$('historyCount').textContent=`${orders.length} pedido(s) registrado(s)`;
+  $('ordersBody').querySelectorAll('[data-del]').forEach(b=>b.onclick=()=>{if(confirm('Excluir este pedido?')){orders=orders.filter(o=>o.id!==b.dataset.del);persistOrders();renderOrders()}});
+  $('ordersBody').querySelectorAll('[data-reopen]').forEach(b=>b.onclick=()=>reopenOrder(orders.find(o=>o.id===b.dataset.reopen)));
+  $('ordersBody').querySelectorAll('[data-print]').forEach(b=>b.onclick=()=>printOrder(orders.find(o=>o.id===b.dataset.print)));
+}
+function reopenOrder(o){
+  if(!o)return;
+  if((items.length||$('client').value.trim())&&!confirm('Substituir o formulário atual pelo pedido selecionado?'))return;
+  editingOrderId=o.id;items=(o.items||[]).map(i=>({...i}));$('client').value=o.client||'';
+  const existingIndex=orders.findIndex(order=>order.id===o.id);if(existingIndex>=0){orders[existingIndex]={...orders[existingIndex],status:'Aberto',updatedAt:new Date().toISOString()};persistOrders();renderOrders()}
+  $('save').textContent='Salvar alterações';$('finish').textContent='✓ Finalizar alterações';
+  showView('novo');renderItems();say('Pedido reaberto. Faça as alterações e salve para atualizar o mesmo pedido.');
+}
+$('search').oninput=renderOrders;
+function printOrder(o){
+  if(!o)return;
+  const rows=(o.items||[]).map(i=>`<tr><td>${esc(i.name)}</td><td>${i.qty}</td><td>${money(i.price)}</td><td>${money(i.qty*i.price)}</td></tr>`).join('');
+  const w=window.open('','_blank');if(!w){say('Permita a abertura de janelas para imprimir o pedido.');return}
+  w.document.write(`<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pedido Comercial Soares</title><style>body{font:14px Arial,sans-serif;padding:28px;color:#172b40}h1{color:#102b46;margin-bottom:4px}.muted{color:#687c8e;font-size:12px}table{width:100%;border-collapse:collapse;margin-top:24px}th,td{border-bottom:1px solid #dce5ed;text-align:left;padding:10px 8px}th{background:#f3f6fa}.total{text-align:right;font-size:22px;font-weight:bold;margin-top:24px}@media(max-width:600px){body{padding:14px}th,td{padding:7px 4px;font-size:12px}}@media print{.printbtn{display:none}}</style></head><body><h1>COMERCIAL SOARES</h1><p class="muted">PEDIDO COMERCIAL</p><p><b>Cliente:</b> ${esc(o.client)}<br><b>Data:</b> ${new Date(o.createdAt||Date.now()).toLocaleString('pt-BR')}<br><b>Status:</b> ${esc(o.status||'Aberto')}</p><table><thead><tr><th>Produto</th><th>Qtd.</th><th>Unitário</th><th>Subtotal</th></tr></thead><tbody>${rows}</tbody></table><div class="total">Total: ${money(o.total||0)}</div><p><button class="printbtn" onclick="window.print()">Imprimir / Salvar como PDF</button></p></body></html>`);w.document.close();
+}
+renderItems();renderOrders();
+</script>
+</body></html>
